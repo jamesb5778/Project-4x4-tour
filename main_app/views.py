@@ -8,3 +8,8 @@ class Home(View):
 
     def get(self, request):
         return HttpResponse("4x4 Home Page")
+
+class Profile(View):
+
+    def get(self, request):
+        return HttpResponse("4x4 User Profile Page")
