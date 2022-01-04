@@ -1,7 +1,14 @@
-.heading {
-    background-color: red;
+body {
+    background-color: lightslategray;
 }
 
-.slogan {
-    text-decoration: underline;
+.image-container {
+    display: block;
+    margin-top: auto;
+    margin-right: auto;
+    width: 50%;
+    position: relative;
+    align-content: center;
 }
+
+

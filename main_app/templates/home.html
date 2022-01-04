@@ -7,20 +7,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>4x4 Tour</title>
-    <link rel="stylesheet" href="{% static 'styles/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
 </head>
 
 <body>
 
-    <!--Heading and Slogan-->
-    <div class="heading">
-        <h1>Welcome to 4x4 Tour</h1>
-        <div class ="slogan">
-            <h3>Make your own path</h3>
+    <!--Heading and Slogan (place in image)-->
+    <div class = "image-container">
+        <image src = "https://images.unsplash.com/photo-1546998557-f4da4a981c78?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8b2Zmcm9hZHxlbnwwfHwwfHw%3D&w=1000&q=80">
+        <div class = "header">
+            <h1>Welcome to 4x4 Tour</h1>
+        </div>
+        <div class = "slogan">
+            <h3>Hit the Off Road.</h3>
         </div>
     </div>
 
+    <!--Introduction - what is the purpose of this website?-->
+    <div class="intro">
+        <h3>Who We Are.</h3>
+        <p>
+            We are a community of off-road adventurers, who enjoy the great outdoors and thrill that off-roading brings.  Our goal as a community is to share knowledge, stories and our overall liking for off-roading. As a member of our community, you will have your own profile page, add your favorite off road trail, share your knowledge about a trail, search for trails in different states, and review other trails you have taken. Interested in joining our community? Just create an account.
+        </p>
+    </div>
 
-    
+    <!--Controller to redirect to Create Account and Login-->
+    <button class="create-account">Create Account </button>
+    <button class="login">Login</button>
 </body>
 </html>
