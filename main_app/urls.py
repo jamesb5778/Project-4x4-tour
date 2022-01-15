@@ -5,5 +5,8 @@ from . import views
 urlpatterns = [
     #path for the home page
     path('', views.Home.as_view(), name="home"),
-    path('profile/', views.Profile.as_view(), name="users-profile"),
+    #path for the profile page
+    path('profile/', views.Profile.as_view(), name="profile"),
+    #path for the offroad parks list page
+    path('park-list/', views.Offroad_Parks.as_view(), name='parks-list'),
 ]
