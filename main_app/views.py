@@ -1,7 +1,9 @@
+from re import template
 from django.shortcuts import render
 from django.views import View
 from django.http import HttpResponse
 from django.views.generic.base import TemplateView
+from django.views.generic.edit import CreateView
 from .models import Offroad_Park
 
 # Create your views here.
@@ -19,3 +21,9 @@ class Offroad_Parks(TemplateView):
         context = super().get_context_data(**kwargs)
         context["offroad_parks"] = Offroad_Park.objects.all()
         return context
+
+class AddOffroadPark(CreateView):
+    model = Offroad_Park
+    fields = ['name', 'location', 'state', 'image', 'Description', 'open_verified']
+    template_name = "new-offroad-park.html"
+    success_url = "/park-list/"

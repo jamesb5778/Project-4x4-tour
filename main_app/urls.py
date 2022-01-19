@@ -9,4 +9,6 @@ urlpatterns = [
     path('profile/', views.Profile.as_view(), name="profile"),
     #path for the offroad parks list page
     path('park-list/', views.Offroad_Parks.as_view(), name='parks-list'),
+    #path to add a offroad park
+    path('offroadpark/new/', views.AddOffroadPark.as_view(), name='new-offroad-park'),
 ]
