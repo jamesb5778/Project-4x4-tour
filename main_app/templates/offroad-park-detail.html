@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class = "detail-header">
+    <h1 class = "park-detail-name">{{offroad_park.name}}</h1>
+    <div class = "park-detail-image">
+        <img src = "{{offroad_park.image}}" alt ="{{offroad_park.name}}" />
+    </div>
+    <h3 class = "park-detail-location">{{offroad_park.location}}</h3>
+    <h3 class = "park-detail-state">{{offroad_park.state}}</h3>
+</div>
+
+<div class = "detail-container">
+    <div class = "park-detail-difficulty">Difficulty: {{offroad_park.Difficulty}}</div>
+    <div class = "park-detail-Duration">Duration: {{offroad_park.Duration}}</div>
+    <div class = "park-detail-Description">Description: {{offroad_park.Description}}</div>
+</div>
+
+{% endblock %}
