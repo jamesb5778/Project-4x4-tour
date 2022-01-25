@@ -6,53 +6,22 @@
 <a class ="button add-offroad-park" href="{% url 'new-offroad-park' %}">Add Offroad Park</a>
 
 <div class = "card-gallery">
-    <div class = "row">
-        <div class = "column">
-            <div class = "card">
-                <h3>Name of Park1</h3>
-                <h6>Location</h6>
-                <h6>State</h6>
-            </div>
+    {% for offroad_park in offroad_parks %}
+    <a href "">
+        <div class = "card">
+            <figure class = "image is-square">
+                <img src = "{{offroad_park.image}}" alt = "{{offroad_park.name}}" />
+            </figure>
         </div>
-        <div class = "column">
-            <div class = "card">
-                <h3>Name of Park2</h3>
-                <h6>Location</h6>
-                <h6>State</h6>
+            <div class = "card-header">
+                <p class = "card-header-title">{{offroad_park.name}}</p>
+                <p class = "card-header-location">{{offroad_park.location}}</p>
+                <p class = "card-header-state">{{offroad_park.state}}</p>
+                <p class = "card-header-difficulty">{{offroad_park.Difficulty}}</p>
             </div>
-        </div>
-        <div class = "column">
-            <div class = "card">
-                <h3>Name of Park3</h3>
-                <h6>Location</h6>
-                <h6>State</h6>
-            </div>
-        </div>
-    </div>
+    </a>
+    {% endfor %}
 
-    <div class = "row">
-        <div class = "column">
-            <div class = "card">
-                <h3>Name of Park4</h3>
-                <h6>Location</h6>
-                <h6>State</h6>
-            </div>
-        </div>
-        <div class = "column">
-            <div class = "card">
-                <h3>Name of Park5</h3>
-                <h6>Location</h6>
-                <h6>State</h6>
-            </div>
-        </div>
-        <div class = "column">
-            <div class = "card">
-                <h3>Name of Park6</h3>
-                <h6>Location</h6>
-                <h6>State</h6>
-            </div>
-        </div>
-    </div>
 </div>
 
 {% endblock %}
