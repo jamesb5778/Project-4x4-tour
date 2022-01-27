@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.views import View
 from django.http import HttpResponse
 from django.views.generic.base import TemplateView
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView
 from django.views.generic import DetailView
 from .models import Offroad_Park
 
@@ -32,3 +32,9 @@ class AddOffroadPark(CreateView):
 class OffroadParkDetail(DetailView):
     model = Offroad_Park
     template_name = "offroad-park-detail.html"
+
+class OffroadParkUpdate(UpdateView):
+    model = Offroad_Park
+    fields = ['name', 'location', 'state', 'image', 'Difficulty', 'Duration', 'Description', 'open_verified']
+    template_name = "new-offroad-park.html"
+    success_url = "/offroadpark/<int:pk>/"

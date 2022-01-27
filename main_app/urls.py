@@ -13,4 +13,6 @@ urlpatterns = [
     path('offroadpark/new/', views.AddOffroadPark.as_view(), name='new-offroad-park'),
     #path to see the details of a single offroad park
     path('offroadpark/<int:pk>/', views.OffroadParkDetail.as_view(), name='offroad-park-detail'),
+    #path to update an offroad park
+    path('offroadpark/<int:pk>/update/', views.OffroadParkUpdate.as_view(), name="update-offroad-park"),
 ]
