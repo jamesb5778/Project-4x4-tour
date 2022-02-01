@@ -14,5 +14,7 @@ urlpatterns = [
     #path to see the details of a single offroad park
     path('offroadpark/<int:pk>/', views.OffroadParkDetail.as_view(), name='offroad-park-detail'),
     #path to update an offroad park
-    path('offroadpark/<int:pk>/update/', views.OffroadParkUpdate.as_view(), name="update-offroad-park"),
+    path('offroadpark/<int:pk>/update', views.OffroadParkUpdate.as_view(), name="update-offroad-park"),
+    #path to delete an offroad park
+    path('offroadpark/<int:pk>/delete', views.OffroadParkDelete.as_view(), name='delete-offroad-park'),
 ]

@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.views import View
 from django.http import HttpResponse
 from django.views.generic.base import TemplateView
-from django.views.generic.edit import CreateView, UpdateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import DetailView
 from .models import Offroad_Park
 
@@ -36,5 +36,10 @@ class OffroadParkDetail(DetailView):
 class OffroadParkUpdate(UpdateView):
     model = Offroad_Park
     fields = ['name', 'location', 'state', 'image', 'Difficulty', 'Duration', 'Description', 'open_verified']
-    template_name = "new-offroad-park.html"
-    success_url = "/offroadpark/<int:pk>/"
+    template_name = "update-offroad-park.html"
+    success_url = "/park-list/"
+
+class OffroadParkDelete(DeleteView):
+    model = Offroad_Park
+    template_name = "delete-offroad-park-confirmation.html"
+    success_url = "/park-list/"
